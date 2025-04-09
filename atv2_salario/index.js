@@ -2,11 +2,12 @@ let salarioFuncionario;
 let anosTrabalhados;
 let generoFuncionario;
 
-//.toUpperCase(); Função para transformar o valor da string original convertido em letras maiúsculas, para comparação.
+//.toUpperCase() = Função para transformar o valor da string original convertido em letras maiúsculas, para comparação.
 generoFuncionario = prompt("Insira o gênero do funcionário, F = Feminino e M = Masculino ").toUpperCase();
 salarioFuncionario = parseFloat(prompt("Insira o Salário Atual do funcionário:"));
 anosTrabalhados = parseInt(prompt("Insira a quantidade de anos trabalhados pelo funcionário: "));
 
+// isNaN = Verifica se não é número
 if ((generoFuncionario !== "M" && generoFuncionario !== "F") || isNaN(salarioFuncionario) || isNaN(anosTrabalhados)) {
     alert("Você inseriu alguma informação incorreta,tente novamente");
 } else {

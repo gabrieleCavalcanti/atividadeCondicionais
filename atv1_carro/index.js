@@ -3,12 +3,12 @@ let kmPercorrido;
 let diasAlugado;
 let valorTotal;
 
-//.toUpperCase(); Função para transformar o valor da string original convertido em letras maiúsculas.
+//.toUpperCase() = Função para transformar o valor da string original convertido em letras maiúsculas.
 tipoCarro = prompt("Digite L para carro de Luxo e P para carro Popular: ").toUpperCase();
 kmPercorrido = parseFloat(prompt("Insira a quantidade de KM percorrido: "));
 diasAlugado = parseInt(prompt("Insira a quantidade de dias alugados"));
 
-
+// isNaN = Verifica se não é número
 if ((tipoCarro !== "L" && tipoCarro !== "P") || isNaN(kmPercorrido) || isNaN(diasAlugado)) {
     alert("Você inseriu alguma informação incorreta,tente novamente");
 } else {
