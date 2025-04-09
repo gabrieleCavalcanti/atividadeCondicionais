@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atv2_Salario"/>
+        <attribute name="authors" value="DES-MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-08 02:00:14 "/>
+        <attribute name="created" value="REVTLU1IO0VTTjUxMi0xMjQyOTg3OzIwMjUtMDQtMDI7IjAzOjI5OjIxICI7MjM5Nw=="/>
+        <attribute name="edited" value="REVTLU1IO0VTTjUxMi0xMjQyOTg3OzIwMjUtMDQtMDg7IjAyOjAwOjE0ICI7MzsyNTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salarioFuncionario" type="Real" array="False" size=""/>
+            <declare name="generoFuncionario" type="String" array="False" size=""/>
+            <declare name="anosTrabalhados" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira o Sal&#225;rio Atual do funcion&#225;rio:&quot;" newline="True"/>
+            <input variable="salarioFuncionario"/>
+            <output expression="&quot;Insira o genero do funcion&#225;rio: &quot;" newline="True"/>
+            <input variable="generoFuncionario"/>
+            <output expression="&quot;Insira a quantidade de anos trabalhados pelo funcion&#225;rio: &quot;" newline="True"/>
+            <input variable="anosTrabalhados"/>
+            <if expression="generoFuncionario == &quot;feminino&quot;">
+                <then>
+                    <if expression="anosTrabalhados &lt; 5">
+                        <then>
+                            <assign variable="salarioFuncionario" expression="(0.04 * salarioFuncionario)+salarioFuncionario"/>
+                        </then>
+                        <else>
+                            <if expression="anosTrabalhados &gt;= 5 &amp;&amp; anosTrabalhados &lt;=10">
+                                <then>
+                                    <assign variable="salarioFuncionario" expression="(0.07 * salarioFuncionario)+salarioFuncionario"/>
+                                </then>
+                                <else>
+                                    <if expression="anosTrabalhados &gt;= 15 &amp;&amp; anosTrabalhados &lt;=20">
+                                        <then>
+                                            <assign variable="salarioFuncionario" expression="(0.12 * salarioFuncionario)+salarioFuncionario"/>
+                                        </then>
+                                        <else>
+                                            <if expression="anosTrabalhados &gt; 20">
+                                                <then>
+                                                    <assign variable="salarioFuncionario" expression="(0.23 * salarioFuncionario)+salarioFuncionario"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;N&#227;o houve ajuste&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="anosTrabalhados &lt; 5">
+                        <then>
+                            <assign variable="salarioFuncionario" expression="(0.03 * salarioFuncionario)+salarioFuncionario"/>
+                        </then>
+                        <else>
+                            <if expression="anosTrabalhados &gt;= 5 &amp;&amp; anosTrabalhados &lt;=15">
+                                <then>
+                                    <assign variable="salarioFuncionario" expression="(0.08 * salarioFuncionario)+salarioFuncionario"/>
+                                </then>
+                                <else>
+                                    <if expression="anosTrabalhados &gt;= 20 &amp;&amp; anosTrabalhados &lt;=30">
+                                        <then>
+                                            <assign variable="salarioFuncionario" expression="(0.14 * salarioFuncionario)+salarioFuncionario"/>
+                                        </then>
+                                        <else>
+                                            <if expression="anosTrabalhados &gt; 30">
+                                                <then>
+                                                    <assign variable="salarioFuncionario" expression="(0.25 * salarioFuncionario)+salarioFuncionario"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;N&#227;o houve ajuste&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;O sal&#225;rio do funcionario &#233; R$&quot; &amp;salarioFuncionario" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

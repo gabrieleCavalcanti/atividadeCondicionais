@@ -4,9 +4,9 @@
         <attribute name="name" value="Atv1_Carro"/>
         <attribute name="authors" value="DES-MH"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-04-02 03:19:17 "/>
+        <attribute name="saved" value="2025-04-08 01:57:34 "/>
         <attribute name="created" value="REVTLU1IO0VTTjUxMi0xMjQyOTg3OzIwMjUtMDQtMDI7IjEwOjQ2OjEwICI7MjM5Mg=="/>
-        <attribute name="edited" value="REVTLU1IO0VTTjUxMi0xMjQyOTg3OzIwMjUtMDQtMDI7IjAzOjE5OjE3ICI7MzsyNTEx"/>
+        <attribute name="edited" value="REVTLU1IO0VTTjUxMi0xMjQyOTg3OzIwMjUtMDQtMDg7IjAxOjU3OjM0ICI7NTsyNTE4"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -14,7 +14,7 @@
             <declare name="tipoCarro" type="String" array="False" size=""/>
             <declare name="kmPercorrido, valorTotal" type="Real" array="False" size=""/>
             <declare name="diasAlugado" type="Integer" array="False" size=""/>
-            <output expression="&quot;Insira o tipo de carro que voc&#234; alugou, Popular ou Luxo&quot;" newline="True"/>
+            <output expression="&quot;Digite L para carro de Luxo e P para carro Popular: &quot;" newline="True"/>
             <input variable="tipoCarro"/>
             <output expression="&quot;Insira a quantidade de KM que percorreu&quot;" newline="True"/>
             <input variable="kmPercorrido"/>
@@ -27,14 +27,14 @@
                             <assign variable="valorTotal" expression="(diasAlugado*90)+(kmPercorrido*0.20)"/>
                         </then>
                         <else>
-                            <assign variable="valorTotal" expression="(diasAlugado*150)+(kmPercorrido*0.10)"/>
+                            <assign variable="valorTotal" expression="(diasAlugado*90)+(kmPercorrido*0.10)"/>
                         </else>
                     </if>
                 </then>
                 <else>
                     <if expression="kmpercorrido &lt;= 200">
                         <then>
-                            <assign variable="valorTotal" expression="(diasAlugado*90)+(kmPercorrido*0.30)"/>
+                            <assign variable="valorTotal" expression="(diasAlugado*150)+(kmPercorrido*0.30)"/>
                         </then>
                         <else>
                             <assign variable="valorTotal" expression="(diasAlugado*150)+(kmPercorrido*0.25)"/>
